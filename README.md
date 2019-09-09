@@ -52,7 +52,7 @@ The side :c must always be the hypotenuse (the longest side), and the value of t
 ```
 &nbsp;
 
-Both `trig/solve` or `trig/solve-right` an optional second argument, which will return the value for the side or angle you desire. This argument must be `:a`, `:b`, `:c`, `:A`, `:B`, or `:C`.
+Both `trig/solve` or `trig/solve-right` will take an optional second argument, which will return the value for the specific side or angle you desire. This argument must be `:a`, `:b`, `:c`, `:A`, `:B`, or `:C`.
 
 ```clojure
 (trig/solve-right {:b 7 :c 10} :a))
