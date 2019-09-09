@@ -1,0 +1,15 @@
+(ns trig.util)
+
+(def round #?(:cljs js/Math.round :clj #(Math/round (double %))))
+(defn sqr [n] (* n n))
+(def sqrt #?(:cljs js/Math.sqrt :clj #(Math/sqrt %)))
+(def sin #?(:cljs js/Math.sin :clj #(Math/sin %)))
+(def asin #?(:cljs js/Math.asin :clj #(Math/asin %)))
+(def cos #?(:cljs js/Math.cos :clj #(Math/cos %)))
+(def acos #?(:cljs js/Math.acos :clj #(Math/acos %)))
+(def tan #?(:cljs js/Math.tan :clj #(Math/tan %)))
+(def atan #?(:cljs js/Math.atan :clj #(Math/atan %)))
+(def pi #?(:cljs js/Math.PI :clj Math/PI))
+
+(defn deg->rad [degrees] (* degrees (/ pi 180)))
+(defn rad->deg [radians] (* radians (/ 180 pi)))
