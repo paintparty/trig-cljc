@@ -6,7 +6,7 @@ A Clojure(Script) library for solving triangles.
 Add the following dependency to your `project.clj` file
 
 ```clojure
-[trig "0.1.0-SNAPSHOT"]
+[trig "0.1.1-SNAPSHOT"]
 ```
 
 ## Usage
