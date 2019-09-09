@@ -5,7 +5,6 @@
    [trig.core :as trig]
    [trig.util :refer [round sqr sqrt sin asin cos acos tan atan pi rad->deg deg->rad]]))
 
-
 (deftest right
   (testing "find angle A given sides b & c, or find angle B given sides a & c"
     (let [s1 6750
@@ -24,6 +23,13 @@
   (testing "find angle A given sides a & c, or find angle B given sides b & c"
     (let [s1 7
           s2 10]
+      (is (= (trig/solve-right {:b s1 :c s2})
+           {:c 10
+            :b 7
+            :a 7.1414284285428495
+            :C 90
+            :B 44.4270040008057
+            :A 45.5729959991943}))
       (is (= (trig/solve-right {:b s1 :c s2} :B)
              (trig/solve-right {:a s1 :c s2} :A)
              (rad->deg (asin (/ s1 s2)))))))
