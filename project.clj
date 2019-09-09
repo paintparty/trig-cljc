@@ -1,4 +1,4 @@
-(defproject trig "0.1.0-SNAPSHOT"
+(defproject trig "0.1.1-SNAPSHOT"
   :description "Triangle solver for Clojure(Script)"
   :url "http://github.com/paintparty/trig-cljc"
   :license {:name "EPL-2.0 OR GPL-2.0-or-later WITH Classpath-exception-2.0"
