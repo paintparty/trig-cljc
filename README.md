@@ -11,7 +11,7 @@ A Clojure(Script) library for solving triangles.
 
 Sides values are supplied with the keys `:a :b :c`, and their opposite angles (with values in degrees) are supplied with the keys `:A :B :C`.
 
-```
+```clojure
 (trig/solve {:b 5 :A 49 :c 7})
 ;; => {:b 5 :c 7 :a 5.298666621959197 :B 45.41169386690557 :C 85.58830613309442 :A 49 :type :SAS}
 
@@ -26,14 +26,14 @@ For solving right triangles, only 2 of the following keys are required:
 `:a, :b, :c, :A, :B`
 The side :c must always be the hypotenuse (the longest side), and the value of the implied angle `:C` will always be 90.
 
-```
+```clojure
 (trig/solve-right {:b 7 :c 10})
 ;; => {:c 10 :b 7 :a 7.1414284285428495 :C 90 :B 44.4270040008057 :A 45.5729959991943 :type :SSA}
 ```
 
 Both `trig/solve` or `trig/solve-right` an optional second argument, which will return the value for the side or angle you desire. This argument must be `:a`, `:b`, `:c`, `:A`, `:B`, or `:C`.
 
-```
+```clojure
 (trig/solve-right {:b 7 :c 10} :a))
 ;; => 7.1414284285428495
 ```
@@ -52,4 +52,3 @@ Public License, v. 2.0 are satisfied: GNU General Public License as published by
 the Free Software Foundation, either version 2 of the License, or (at your
 option) any later version, with the GNU Classpath Exception which is available
 at https://www.gnu.org/software/classpath/license.html.
-
